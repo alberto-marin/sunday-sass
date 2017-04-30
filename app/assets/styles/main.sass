@@ -1,0 +1,45 @@
+// VARIABLES
+// Colors
+$blue--light: rgb(190,202,235)
+$blue--medium: rgb(139,138,163)
+$yellow--light: rgb(253,233,154)
+$yellow--medium: rgb(248,216,98)
+$orange--light: rgb(248,161,36)
+
+$red--light-tr: rgba(255,65,32,.2)
+
+$backgroundColors: $blue--medium, $blue--light, $yellow--light, $yellow--medium, $orange--light
+// Fonts
+$fontDefault: monospace
+
+// MIXINS
+=boxAlert()
+  background: $red--light-tr
+  border: 4px double white
+  border-radius: 4px
+  max-width: 316px
+  box-sizing: border-box
+  color: white
+  text-shadow: 1px 1px 2px black
+  line-height: 1.5
+  font-size: 1.4em
+  padding: 0 16px
+
+// STYLES
+
+body
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  font-family: $fontDefault
+  background: $blue--medium
+  background-image: linear-gradient(360deg,$backgroundColors)
+  background-size: cover
+  background-repeat: norepeat
+
+article
+  +boxAlert()
+
+header, footer
+  margin: 16px auto
